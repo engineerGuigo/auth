@@ -44,4 +44,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginHorizontal: 30,
   },
+  form: {
+    marginBottom: 48,
+    marginHorizontal: 30,
+  },
+  inputTitle: {
+    color: "#f646d3",
+    fontSize: 10,
+    textTransform: "uppercase",
+  },
+  input: {
+    borderBottomColor: "#f646d3",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    height: 40,
+    fontSize: 15,
+    color: "#3F5",
+  },
 });
