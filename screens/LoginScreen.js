@@ -22,7 +22,26 @@ export default class LoginScreen extends React.Component {
             <Text style={styles.inputTitle}>Email Adress</Text>
             <TextInput style={styles.input} autoCapitalize="none"></TextInput>
           </View>
+
+          <View style={{ marginTop: 32 }}>
+            <Text style={styles.inputTitle}>Password</Text>
+            <TextInput
+              style={styles.input}
+              secureTextEntry
+              autoCapitalize="none"
+            ></TextInput>
+          </View>
         </View>
+
+        <TouchableOpacity style={styles.button}>
+          <Text style={{ color: "#fff", fontWeight: "500" }}>Sign in</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={{ alignSelf: "center", marginTop: 32 }}>
+          <Text style={{ color: "#414959", fontSize: 13 }}>
+            New to My-Market? <Text>Sign Up</Text>
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -59,5 +78,13 @@ const styles = StyleSheet.create({
     height: 40,
     fontSize: 15,
     color: "#3F5",
+  },
+  button: {
+    marginHorizontal: 30,
+    backgroundColor: "#1a2343",
+    borderRadius: 4,
+    height: 52,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
