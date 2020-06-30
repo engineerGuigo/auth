@@ -38,7 +38,7 @@ export default class LoginScreen extends React.Component {
         <StatusBar barStyle="light-content"></StatusBar>
         <Image
           source={require("../assets/greentop.png")}
-          style={{ marginTop: -50, marginLeft: -100 }}
+          style={{ marginTop: -90, marginLeft: -100 }}
         ></Image>
         <Image
           source={require("../assets/greentop.png")}
@@ -48,7 +48,7 @@ export default class LoginScreen extends React.Component {
           source={require("../assets/mymarketlogo.png")}
           style={{ marginTop: -110, alignSelf: "center", borderRadius: 15 }}
         ></Image>
-        <Text style={styles.greeting}>{`Hello again.\nWelcome back.`}</Text>
+        <Text style={styles.greeting}>{`Welcome back to My-Market!`}</Text>
 
         <View style={styles.errorMessage}>
           {this.state.errorMessage && (

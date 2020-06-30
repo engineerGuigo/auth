@@ -8,7 +8,7 @@ import {
   Image,
   StatusBar,
 } from "react-native";
-import { Ionicons, AntDesign } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import * as firebase from "firebase";
 
 export default class RegisterScreen extends React.Component {
@@ -42,13 +42,16 @@ export default class RegisterScreen extends React.Component {
 
         <Image
           source={require("../assets/greentop.png")}
-          style={{ marginTop: -50, marginLeft: -100 }}
+          style={{ marginTop: -90, marginLeft: -100 }}
         ></Image>
         <Image
           source={require("../assets/greentop.png")}
           style={{ position: "absolute", bottom: -225, right: -200 }}
         ></Image>
-
+        <Image
+          source={require("../assets/mymarketlogo.png")}
+          style={{ marginTop: -110, alignSelf: "center", borderRadius: 15 }}
+        ></Image>
         <TouchableOpacity
           style={styles.back}
           onPress={() => this.props.navigation.goBack()}
@@ -71,14 +74,6 @@ export default class RegisterScreen extends React.Component {
           <Text
             style={styles.greeting}
           >{`Hello!\nSign up to get started.`}</Text>
-          <TouchableOpacity style={styles.avatar}>
-            <AntDesign
-              name="pluscircle"
-              size={40}
-              color="#00b359"
-              style={{ marginTop: 10, marginLeft: 185 }}
-            ></AntDesign>
-          </TouchableOpacity>
         </View>
 
         <View style={styles.errorMessage}>
@@ -124,9 +119,12 @@ export default class RegisterScreen extends React.Component {
           <Text style={{ color: "#fff", fontWeight: "500" }}>Sign up</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{ alignSelf: "center", marginTop: 32 }}>
+        <TouchableOpacity
+          style={{ alignSelf: "center", marginTop: 32 }}
+          onPress={() => this.props.navigation.navigate("Login")}
+        >
           <Text style={{ color: "#404040", fontSize: 13 }}>
-            New to My-Market?{" "}
+            Already have an account?{" "}
             <Text style={{ fontWeight: "500", color: "#00b359" }}>Login</Text>
           </Text>
         </TouchableOpacity>
