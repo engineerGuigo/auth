@@ -66,9 +66,9 @@ export default class LoginScreen extends React.Component {
           style={{ alignSelf: "center", marginTop: 32 }}
           onPress={() => this.props.navigation.navigate("Register")}
         >
-          <Text style={{ color: "#414959", fontSize: 13 }}>
+          <Text style={{ color: "#404040", fontSize: 13 }}>
             New to My-Market?{" "}
-            <Text style={{ fontWeight: "500", color: "#e9446a" }}>Sign Up</Text>
+            <Text style={{ fontWeight: "500", color: "#00b359" }}>Sign Up</Text>
           </Text>
         </TouchableOpacity>
       </View>
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
   },
   error: {
-    color: "#E9446A",
+    color: "#00b359",
     fontSize: 13,
     fontWeight: "600",
     textAlign: "center",
@@ -103,20 +103,20 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
   },
   inputTitle: {
-    color: "#f646d3",
+    color: "#404040",
     fontSize: 10,
     textTransform: "uppercase",
   },
   input: {
-    borderBottomColor: "#f646d3",
+    borderBottomColor: "#404040",
     borderBottomWidth: StyleSheet.hairlineWidth,
     height: 40,
     fontSize: 15,
-    color: "#3F5",
+    color: "#404040",
   },
   button: {
     marginHorizontal: 30,
-    backgroundColor: "#1a2343",
+    backgroundColor: "#00b359",
     borderRadius: 4,
     height: 52,
     alignItems: "center",
