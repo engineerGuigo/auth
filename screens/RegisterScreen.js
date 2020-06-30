@@ -8,7 +8,7 @@ import {
   Image,
   StatusBar,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, AntDesign } from "@expo/vector-icons";
 import * as firebase from "firebase";
 
 export default class RegisterScreen extends React.Component {
@@ -59,7 +59,27 @@ export default class RegisterScreen extends React.Component {
             color="#fff"
           ></Ionicons>
         </TouchableOpacity>
-        <Text style={styles.greeting}>{`Hello!\nSign up to get started.`}</Text>
+
+        <View
+          styles={{
+            position: "absolute",
+            top: 64,
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <Text
+            style={styles.greeting}
+          >{`Hello!\nSign up to get started.`}</Text>
+          <TouchableOpacity style={styles.avatar}>
+            <AntDesign
+              name="pluscircle"
+              size={40}
+              color="#00b359"
+              style={{ marginTop: 10, marginLeft: 185 }}
+            ></AntDesign>
+          </TouchableOpacity>
+        </View>
 
         <View style={styles.errorMessage}>
           {this.state.errorMessage && (
