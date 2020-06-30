@@ -5,10 +5,16 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  Image,
+  StatusBar,
 } from "react-native";
 import * as firebase from "firebase";
 
 export default class RegisterScreen extends React.Component {
+  static navigationOptions = {
+    headerShown: false,
+  };
+
   state = {
     name: "",
     email: "",
@@ -31,6 +37,16 @@ export default class RegisterScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="light-content"></StatusBar>
+
+        <Image
+          source={require("../assets/greentop.png")}
+          style={{ marginTop: -50, marginLeft: -100 }}
+        ></Image>
+        <Image
+          source={require("../assets/greentop.png")}
+          style={{ position: "absolute", bottom: -225, right: -200 }}
+        ></Image>
         <Text style={styles.greeting}>{`Hello!\nSign up to get started.`}</Text>
 
         <View style={styles.errorMessage}>

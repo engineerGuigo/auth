@@ -32,12 +32,13 @@ export default class LoginScreen extends React.Component {
   };
 
   render() {
+    LayoutAnimation.easeInEaseOut();
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content"></StatusBar>
         <Image
           source={require("../assets/greentop.png")}
-          style={{ marginTop: -75, marginLeft: -100 }}
+          style={{ marginTop: -50, marginLeft: -100 }}
         ></Image>
         <Image
           source={require("../assets/greentop.png")}
