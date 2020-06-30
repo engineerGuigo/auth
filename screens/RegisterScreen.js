@@ -8,6 +8,7 @@ import {
   Image,
   StatusBar,
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import * as firebase from "firebase";
 
 export default class RegisterScreen extends React.Component {
@@ -47,6 +48,17 @@ export default class RegisterScreen extends React.Component {
           source={require("../assets/greentop.png")}
           style={{ position: "absolute", bottom: -225, right: -200 }}
         ></Image>
+
+        <TouchableOpacity
+          style={styles.back}
+          onPress={() => this.props.navigation.goBack()}
+        >
+          <Ionicons
+            name="ios-arrow-round-back"
+            size={32}
+            color="#fff"
+          ></Ionicons>
+        </TouchableOpacity>
         <Text style={styles.greeting}>{`Hello!\nSign up to get started.`}</Text>
 
         <View style={styles.errorMessage}>
@@ -147,6 +159,17 @@ const styles = StyleSheet.create({
     backgroundColor: "#00b359",
     borderRadius: 4,
     height: 52,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  back: {
+    position: "absolute",
+    top: 48,
+    left: 32,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: "rgba(21, 22, 48, 0.1)",
     alignItems: "center",
     justifyContent: "center",
   },
